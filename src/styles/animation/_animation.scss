@@ -1,0 +1,36 @@
+@keyframes leftSlider {
+  0% {
+    transform: translateX(-100%);
+  }
+  80% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes buttonAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-20px) rotate(-20deg);
+  }
+  60% {
+    transform: translateY(10px) rotate(20deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}

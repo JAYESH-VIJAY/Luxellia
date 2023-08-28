@@ -1,0 +1,246 @@
+@import "./../../styles/variable";
+
+.header {
+  z-index: 999;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // border: 2px solid red;
+  background-color: #fff;
+  width: 100%;
+  position: relative;
+  gap: 18rem;
+
+  h1 {
+    color: $primary-font-color;
+    font-size: 4rem;
+    font-style: italic;
+    margin-top: -0.8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-family: "Montserrat", sans-serif;
+    // border: 2px solid red;
+    margin-left: 2.4rem;
+  }
+
+  nav > ul {
+    // border: 2px solid red;
+    display: flex;
+    gap: 6.4rem;
+    align-items: center;
+    max-width: 64rem;
+    list-style: none;
+
+    a {
+      font-size: 1.6rem;
+      color: $primary-font-color;
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+    }
+  }
+
+  div {
+    // border: 2px solid red;
+    width: 16rem;
+    display: flex;
+    gap: 1.6rem;
+
+    span {
+      display: inline-block;
+      width: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  .menu {
+    display: none;
+
+    .menu_icon {
+      width: 4.8rem;
+      height: 4.8;
+    }
+  }
+}
+
+header.visibleheader {
+  min-height: 1000vh;
+  box-shadow: 6px 0px 24px rgba(0, 0, 0, 0.2);
+  align-items: start;
+  padding-top: 4.8rem;
+
+  .visible {
+    display: flex;
+
+    ul {
+      padding-left: 2.4rem;
+      flex-direction: column;
+      gap: 3.2rem;
+      width: 50vw;
+      align-items: start;
+
+      li > a {
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+  .header {
+    gap: 9.6rem;
+    nav > ul {
+      gap: 4.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .header {
+    gap: 6.4rem;
+    h1 {
+      margin-left: 1.6rem;
+    }
+    nav > ul {
+      gap: 2.8rem;
+    }
+    div {
+      gap: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 576px) {
+  .header {
+    gap: 0rem;
+    justify-content: space-evenly;
+    h1 {
+      font-size: 4rem;
+      margin-left: 3.2rem;
+    }
+    nav {
+      display: none;
+    }
+    div {
+      margin-left: 12.8rem;
+      gap: 1.6rem;
+      span {
+        width: 2.8rem;
+      }
+    }
+    .menu {
+      display: inline-block;
+      .menu_icon {
+        width: 4.2rem;
+      }
+      .cross_icon {
+        width: 4.4rem;
+        padding: 0.6rem;
+        position: absolute;
+        top: 0%;
+        left: 100%;
+        color: $color-font-white;
+        background-color: $color-background-dark;
+      }
+    }
+  }
+
+  header.visibleheader {
+    max-width: 60vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    gap: 0rem;
+    justify-content: space-evenly;
+    h1 {
+      font-size: 3.2rem;
+      margin-left: 3.2rem;
+    }
+    nav {
+      display: none;
+    }
+    div {
+      margin-left: 9.6rem;
+      gap: 0.8rem;
+      span {
+        width: 2.4rem;
+      }
+    }
+    .menu {
+      display: inline-block;
+      margin-right: 2.4rem;
+      .menu_icon {
+        width: 3.6rem;
+      }
+      .cross_icon {
+        width: 4.4rem;
+        padding: 0.6rem;
+        position: absolute;
+        top: 0%;
+        left: 100%;
+        color: $color-font-white;
+        background-color: $color-background-dark;
+      }
+    }
+  }
+  header.visibleheader {
+    max-width: 75vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    height: 8rem;
+    h1 {
+      font-size: 2.8rem;
+      margin-left: 3.2rem;
+      margin-top: -0.4rem;
+    }
+
+    div {
+      margin-left: 6.4rem;
+      gap: 0.8rem;
+      span {
+        width: 2rem;
+      }
+    }
+    .menu > .menu_icon {
+      width: 2.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    div {
+      margin-left: 4.8rem;
+      gap: 0.4rem;
+      span {
+        width: 1.6rem;
+      }
+    }
+    .menu > .menu_icon {
+      width: 2.4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .header {
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    div {
+      margin-left: 2.4rem;
+      gap: 0.2rem;
+    }
+  }
+}
